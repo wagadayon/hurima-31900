@@ -9,11 +9,10 @@
 |  first_name      |  string  | null: false       |
 |  last_name_kana  |  string  |  null: false      |
 |  first_name_kana |  string  |  null: false      |
-| birthday         |  date    |    null: false    |
+|  birthday         |  date    |    null: false    |
 
 - has_one :address
 - has_one :credit
-- has_many :creditcards
 - has_many :items
 - has_many: comments
 
@@ -30,6 +29,11 @@
 | address      | swtring| null: false |
 | romm_number  | string | null: false |
 | phone        | string | null: false |
+
+- belongs_to :user
+
+
+
  
 ### item table
 | Column       | Type   | Options                         |
@@ -43,6 +47,12 @@
 | price        | integer| null: false                     |
 | day_id       | data   | null:false                      |
 | user_id      | integer| null: false, foregin_key : true |
+
+
+
+- belongs_to :user
+- has_many :comments
+
 
 
 
