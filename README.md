@@ -48,8 +48,6 @@
 | day_id       | data   | null:false                      |
 | user_id      | integer| null: false, foregin_key : true |
 
-
-
 - belongs_to :user
 - has_many :comments
 
